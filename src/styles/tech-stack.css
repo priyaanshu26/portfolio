@@ -1,0 +1,151 @@
+.tech-stack {
+	min-height: 100vh;
+	display: flex;
+	padding: 2rem 5%;
+	width: 100%;
+}
+
+.tech-stack .title {
+	margin-top: 10rem;
+}
+
+.tech-stack>div {
+	width: 50%;
+	padding: 1rem;
+}
+
+.tech-stack p {
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	line-height: 1.5rem;
+}
+
+.tech-row {
+	display: flex;
+	gap: 1rem;
+	margin: 20px 0px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.tech-grid {
+	display: flex;
+	gap: 4rem;
+	flex-direction: column;
+	position: relative;
+	padding-left: 3rem;
+	border-left: 3px solid rgba(31, 195, 255, 0.2);
+	margin-left: 2rem;
+	width: 100%;
+}
+
+.tech-grid>div {
+	position: relative;
+	width: 100%;
+}
+
+/* Tree Nodes (Dots) */
+.tech-grid>div::before {
+	content: '';
+	position: absolute;
+	left: -3.55rem;
+	top: 0.8rem;
+	width: 16px;
+	height: 16px;
+	background: #000;
+	border: 3px solid rgb(31, 195, 255);
+	border-radius: 50%;
+	box-shadow: 0 0 15px rgb(31, 195, 255);
+	z-index: 2;
+	transition: 0.3s;
+}
+
+.tech-grid>div:hover::before {
+	transform: scale(1.3);
+	background: rgb(31, 195, 255);
+	box-shadow: 0 0 25px rgb(31, 195, 255);
+}
+
+/* Branch Lines */
+.tech-grid>div::after {
+	content: '';
+	position: absolute;
+	left: -2.9rem;
+	top: 1.25rem;
+	width: 1.5rem;
+	height: 2px;
+	background: linear-gradient(90deg, rgb(31, 195, 255), transparent);
+	z-index: 1;
+}
+
+
+.tech-grid p {
+	font-family: 'Fugaz One', sans-serif;
+	font-size: 1.5rem;
+	color: #fff;
+	margin-bottom: 2rem;
+	letter-spacing: 1px;
+}
+
+.tech-row {
+	display: flex;
+	gap: 1.5rem;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+@media screen and (max-width: 1100px) {
+	.tech-stack {
+		padding: 4rem 5% 2rem;
+		flex-direction: column-reverse;
+		gap: 3rem;
+		height: auto;
+		min-height: auto;
+	}
+
+	.tech-stack>div {
+		width: 100% !important;
+		padding: 0;
+	}
+
+	.tech-stack .title {
+		margin-top: 2rem;
+	}
+
+	.tech-grid {
+		margin-left: 1rem;
+		padding-left: 2rem;
+		gap: 3rem;
+	}
+
+	.tech-grid>div::before {
+		left: -2.55rem;
+	}
+
+	.tech-grid>div::after {
+		left: -2rem;
+	}
+
+	.tech-grid p {
+		font-size: 1.3rem;
+		text-align: left;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.tech-grid {
+		padding-left: 1.5rem;
+		gap: 2rem;
+	}
+
+	.tech-grid>div::before {
+		left: -2.05rem;
+		width: 12px;
+		height: 12px;
+	}
+
+	.tech-grid>div::after {
+		left: -1.7rem;
+		width: 1rem;
+	}
+}

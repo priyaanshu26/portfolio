@@ -1,0 +1,53 @@
+:root {
+	--text-primary: clamp(4rem, 10vw, 8rem);
+	--text-secondary: clamp(6rem, 15vw, 11rem);
+}
+
+.title {
+	text-align: center;
+	margin: auto;
+	padding: 2rem;
+	width: fit-content;
+	position: sticky;
+	top: 50vh;
+	transform: translateY(-50%);
+	z-index: 10;
+}
+
+.title .primary-text {
+	color: white;
+	font-size: var(--text-primary);
+	margin-bottom: -4rem;
+	/* Negative margin to overlap */
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+	font-family: 'Fugaz One', sans-serif;
+	position: relative;
+	z-index: 2;
+}
+
+.title .secondary-text {
+	font-size: var(--text-secondary);
+	text-align: end;
+	position: relative;
+	z-index: 1;
+	opacity: 0.8;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+	font-family: 'Fugaz One', sans-serif;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-width: 3px;
+	-webkit-text-stroke-color: hsl(196, 100%, 56%);
+}
+
+@media screen and (max-width: 700px) {
+	:root {
+		--text-primary: 5rem;
+		--text-secondary: 6rem;
+	}
+
+	.title {
+		position: relative;
+		top: 0rem;
+	}
+}

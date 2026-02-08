@@ -1,0 +1,133 @@
+.hero-section {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 2.5rem;
+	position: relative;
+}
+
+.hero-section .name {
+	font-size: clamp(3rem, 12vw, 7rem);
+	color: rgb(31, 195, 255);
+	text-align: center;
+	line-height: 1.1;
+}
+
+.hero-section p {
+	font-size: clamp(1rem, 4vw, 2.5rem);
+	text-align: center;
+}
+
+.blur {
+	height: 12rem;
+	width: 12rem;
+	background-color: hsl(196, 100%, 56%, 0.7);
+	filter: blur(100px);
+	border-radius: 100px;
+	z-index: -1;
+	position: absolute;
+}
+
+.bottom-bar {
+	border-radius: 13px;
+	color: var(--primaryFg);
+	font-size: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: 30px;
+	gap: 15px;
+	flex-wrap: wrap;
+	width: 90%;
+	max-width: 600px;
+}
+
+.github-ribbon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 250px;
+	height: 50px;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: rotate(45deg) translate(50%, 150%);
+	transform-origin: top right;
+	z-index: 9999;
+	background-color: transparent;
+	color: inherit;
+}
+
+/* The glowing panel (matches your floating button style) */
+.github-ribbon div {
+	width: 100%;
+	height: 100%;
+	border-radius: 13px;
+	background-color: var(--primaryBg);
+	box-shadow: 0px -3px 15px 0px var(--primaryHi) inset;
+	color: var(--primaryFg);
+	font-size: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	transition: all 0.25s ease;
+}
+
+/* Glow effect */
+.github-ribbon span {
+	width: 100px;
+	height: 60px;
+	background-color: var(--primaryHi);
+	border-radius: 100%;
+	filter: blur(20px);
+	position: absolute;
+	bottom: -50%;
+	transition: all 0.25s ease;
+}
+
+.github-ribbon:hover>span {
+	bottom: -40%;
+	filter: blur(18px);
+	scale: 1.2;
+}
+
+.github-ribbon:hover>div {
+	transform: translateY(4px);
+}
+
+/* 🔹 Responsive tweak */
+@media screen and (max-width: 1100px) {
+	.floating-btn.first {
+		position: static;
+		margin-bottom: 2rem;
+	}
+
+	.floating-btn.sec {
+		position: static;
+		margin-top: 2rem;
+	}
+
+	.floating-btn.third {
+		position: static;
+		transform: none;
+		margin-block: 1rem;
+	}
+
+	.hero-section {
+		padding: 4rem 1rem;
+		height: auto;
+		min-height: 100vh;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.bottom-bar {
+		gap: 10px;
+		bottom: 20px;
+	}
+}
