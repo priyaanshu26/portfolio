@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { SectionTitle } from '../components/section-title.component';
 import '../styles/projects.css';
@@ -37,10 +38,14 @@ export const Projects = () => {
         >
             <div className='projects-grid'>
                 {projects.map((project, index) => (
-                    <div
+                    <motion.div
                         key={index}
                         className='project-card-wrapper'
                         style={{ '--clr': project.color } as React.CSSProperties}
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: '-100px' }}
+                        transition={{ duration: 0.6, delay: index * 0.1 }}
                     >
                         <div className='project-card'>
                             <div className='project-content'>
@@ -76,7 +81,7 @@ export const Projects = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
             <div>

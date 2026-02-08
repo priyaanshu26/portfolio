@@ -1,3 +1,4 @@
+import { BackgroundStars } from './components/background-stars';
 import { MouseTrail } from './components/mouse-trail';
 import { ScrollBar } from './components/scroll-bar';
 import { AboutMe } from './sections/about-me.section';
@@ -17,6 +18,7 @@ import './styles/title.css';
 function App() {
 	return (
 		<>
+			<BackgroundStars />
 			<ScrollBar />
 			<MouseTrail />
 			<InfoSection />

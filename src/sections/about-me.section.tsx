@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { SectionTitle } from '../components/section-title.component';
 
 const timeline = [
@@ -49,14 +50,25 @@ export const AboutMe = () => {
 			className='about-me container'
 			id='about-me'
 		>
-			<div>
+			<motion.div
+				initial={{ opacity: 0, x: -50 }}
+				whileInView={{ opacity: 1, x: 0 }}
+				viewport={{ once: true }}
+				transition={{ duration: 0.8 }}
+			>
 				<SectionTitle
 					title='About'
 					subTitle='ME'
 				/>
-			</div>
+			</motion.div>
 			<div>
-				<div className='intro'>
+				<motion.div
+					className='intro'
+					initial={{ opacity: 0, y: 30 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.8, delay: 0.2 }}
+				>
 					<p>👋 Hey, I'm Priyanshu Choudhary, a Full Stack & Flutter Developer.</p>
 					<p>
 						I am a Computer Science Engineering undergraduate with hands-on
@@ -71,12 +83,16 @@ export const AboutMe = () => {
 						I am passionate about applying AI/ML to real-world problem solving
 						and automation.
 					</p>
-				</div>
+				</motion.div>
 				<div>
 					{timeline.map(({ items, title }, idx) => (
-						<div
+						<motion.div
 							className='timeline'
 							key={idx}
+							initial={{ opacity: 0, y: 30 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							transition={{ duration: 0.8, delay: 0.4 + idx * 0.2 }}
 						>
 							<h1>{title}</h1>
 							{items.map(({ title, place, timePeriod, description }, idx) => (
@@ -93,7 +109,7 @@ export const AboutMe = () => {
 									</div>
 								</div>
 							))}
-						</div>
+						</motion.div>
 					))}
 				</div>
 			</div>

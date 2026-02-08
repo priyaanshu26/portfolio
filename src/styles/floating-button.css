@@ -97,3 +97,27 @@
 .floating-btn.third>span {
 	background-color: rgba(0, 237, 100, 0.3);
 }
+
+.floating-btn.fourth {
+	bottom: 25%;
+	left: 10%;
+}
+
+.floating-btn.fourth>div {
+	background-color: rgba(31, 195, 255, 0.15);
+	box-shadow: 0px -3px 20px 0px rgba(31, 195, 255, 0.5) inset;
+	border: 1px solid rgba(31, 195, 255, 0.3);
+	font-weight: 700;
+}
+
+.floating-btn.fourth>span {
+	background-color: rgba(31, 195, 255, 0.4);
+	width: 140px;
+}
+
+@media screen and (max-width: 1100px) {
+	.floating-btn.fourth {
+		position: static;
+		margin-top: 1rem;
+	}
+}

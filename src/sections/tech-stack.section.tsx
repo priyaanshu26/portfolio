@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import {
 	BiLogoCPlusPlus,
 	BiLogoPostgresql,
@@ -227,15 +228,26 @@ export const TechStack = () => {
 			className='tech-stack'
 			id='tech-stack'
 		>
-			<div>
+			<motion.div
+				initial={{ opacity: 0, x: -50 }}
+				whileInView={{ opacity: 1, x: 0 }}
+				viewport={{ once: true }}
+				transition={{ duration: 0.8 }}
+			>
 				<SectionTitle
 					title='Tech'
 					subTitle='STACK'
 				/>
-			</div>
+			</motion.div>
 			<div className='tech-grid'>
 				{techs.map((tech, index) => (
-					<div key={index}>
+					<motion.div
+						key={index}
+						initial={{ opacity: 0, x: 30 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.6, delay: index * 0.15 }}
+					>
 						<p>{tech.heading}</p>
 						<div className='tech-row'>
 							{tech.items.map((item, index) => (
@@ -247,7 +259,7 @@ export const TechStack = () => {
 								/>
 							))}
 						</div>
-					</div>
+					</motion.div>
 				))}
 			</div>
 		</section>

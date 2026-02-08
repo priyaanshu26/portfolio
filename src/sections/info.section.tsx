@@ -35,6 +35,12 @@ export const InfoSection = () => {
 				className='sec'
 				href='/#tech-stack'
 			/>
+			<FloatingButton
+				label='Download CV'
+				className='fourth'
+				href='/CV.pdf'
+				download='Priyanshu_Choudhary_CV.pdf'
+			/>
 
 			<div className='blur'></div>
 			<div className='bottom-bar'>
