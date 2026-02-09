@@ -23,8 +23,8 @@ export const FloatingButton = ({
 			target={target}
 			rel={rel}
 		>
-			<div>{label}</div>
-			<span></span>
+			<div style={{ pointerEvents: 'none' }}>{label}</div>
+			<span style={{ pointerEvents: 'none' }}></span>
 		</a>
 	);
 };

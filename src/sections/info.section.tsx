@@ -38,10 +38,8 @@ export const InfoSection = () => {
 			<FloatingButton
 				label='Download CV'
 				className='fourth'
-				href={`${import.meta.env.BASE_URL}CV.pdf`}
+				href='/CV.pdf'
 				download='Priyanshu_Choudhary_CV.pdf'
-				target='_blank'
-				rel='noopener noreferrer'
 			/>
 
 			<div className='blur'></div>
