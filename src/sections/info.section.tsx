@@ -17,12 +17,12 @@ export const InfoSection = () => {
 			<FloatingButton
 				label='About Me'
 				className='first'
-				href='/#about-me'
+				href={`${import.meta.env.BASE_URL}#about-me`}
 			/>
 			<FloatingButton
 				label='Projects'
 				className='third'
-				href='/#projects'
+				href={`${import.meta.env.BASE_URL}#projects`}
 			/>
 			<p>Hi, I am</p>
 			<TextHover
@@ -33,13 +33,15 @@ export const InfoSection = () => {
 			<FloatingButton
 				label='Tech'
 				className='sec'
-				href='/#tech-stack'
+				href={`${import.meta.env.BASE_URL}#tech-stack`}
 			/>
 			<FloatingButton
 				label='Download CV'
 				className='fourth'
-				href='/CV.pdf'
+				href={`${import.meta.env.BASE_URL}CV.pdf`}
 				download='Priyanshu_Choudhary_CV.pdf'
+				target='_blank'
+				rel='noopener noreferrer'
 			/>
 
 			<div className='blur'></div>
