@@ -2,8 +2,6 @@
 
 Welcome to my personal portfolio! This project showcases my journey, skills, and projects as a Software Engineer and Full Stack Developer. It features a modern, premium aesthetic with a focus on visual impact and smooth user experience.
 
-![Portfolio Preview](public/og-image.png)
-
 ## ✨ Key Features
 
 -   **💎 Premium Aesthetics**: Modern glassmorphism UI with vibrant cyan accents and sleek dark mode.
