@@ -38,8 +38,7 @@ export const InfoSection = () => {
 			<FloatingButton
 				label='Download CV'
 				className='fourth'
-				href='CV.pdf'
-				download='Priyanshu_Choudhary_CV.pdf'
+				href='/CV.pdf'
 				target='_blank'
 				rel='noopener noreferrer'
 			/>
